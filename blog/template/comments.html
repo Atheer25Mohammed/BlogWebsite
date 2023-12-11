@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Comment{% endblock %}
+
+{% block content1 %}
+    <h2>User List</h2>
+{% endblock %}
+
+    {% block content %}
+
+<table class="table table-hover table-responsive">
+<tbody>
+
+    {% for comment in comments%}
+        <tr>
+         
+            <td>{{ comment.comment_id }}</td>
+            <td>{{ comment.Post_ID }}</td>
+            <td>{{ comment.User_ID }}</td>
+            <td>{{ comment.Content }}</td>
+            <td>{{ comment.Date }}</td>
+           
+            
+        </tr>
+    {% endfor %}
+    <tbody>
+</table>
+    <!-- Display a list of users -->
+{% endblock %}

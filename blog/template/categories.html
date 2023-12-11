@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}categories{% endblock %}
+
+{% block content1 %}
+    <h2>User List</h2>
+{% endblock %}
+
+    {% block content %}
+
+<table class="table table-hover table-responsive">
+<tbody>
+
+    {% for categorie in categories%}
+        <tr>
+         
+            <td>{{ categorie.cat_id }}</td>
+            <td>{{ categorie.Name }}</td>
+           
+            
+        </tr>
+    {% endfor %}
+    <tbody>
+</table>
+    <!-- Display a list of users -->
+{% endblock %}

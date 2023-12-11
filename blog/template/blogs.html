@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Users{% endblock %}
+
+{% block content1 %}
+    <h2>User List</h2>
+{% endblock %}
+
+    {% block content %}
+
+<table class="table table-hover table-responsive">
+<tbody>
+
+    {% for post in Posts%}
+        <tr>
+         
+            <td>{{ post.post_id }}</td>
+            <td>{{ post.Title }}</td>
+            <td>{{ post.Content }}</td>
+            <td>{{ post.Category }}</td>
+            <td>{{ post.Date }}</td>
+            
+        </tr>
+    {% endfor %}
+    <tbody>
+</table>
+    <!-- Display a list of users -->
+{% endblock %}
